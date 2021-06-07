@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/fontawesome/fontawesome-free-5.15.3-web/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,16 +23,16 @@
             <div class="w-100 container-nav">
                 <img class="logo" src="/img/screen-0.png" alt="">
                 <ul class="nav-ul">
-                    <li id="inicio"> <a href="#inicio">Inicio</a> </li>
+                    <li> <a href="#inicio">Inicio</a> </li>
                     <li> <a href="#nosotros">Sobre nosotros</a> </li>
-                    <li> <a href="#">Estrenos</a> </li>
-                    <li> <a href="#">Contacto</a> </li>
+                    <li> <a href="#carrusel">Estrenos</a> </li>
+                    <li> <a href="#contact">Contacto</a> </li>
                     <button>Iniciar sesion</button>
                 </ul>
             </div>
         </nav>
         <div>
-            <img class="w-100 portada" src="/img/bg.jpg" alt="">
+            <img class="w-100 portada" src="/img/bg.jpg" alt="" id="inicio">
             <div class="portada-filter"></div>
         </div>
         <div class="w-100 titulo">
@@ -72,9 +73,85 @@
                 <h2>Infantiles</h2>
             </div>
         </div>
+    </div>
 
+    <section class="contacto" id="contacto">
+        <!-- PRUEBA -->
+        <div class="container" id="carrusel">
 
-        </section>
+            <ul class="slider">
+                <li id="slide1">
+                    <img src="/img/liga.jpg" alt="">
+                </li>
+                <li id="slide2">
+                    <img src="/img/falcon.jpg" alt="">
+                </li>
+                <li id="slide3">
+                    <img src="/img/godzila1.jpg" alt="">
+                </li>
+            </ul>
+
+            <ul class="menu">
+                <li>
+                    <a href="#slide1"></a>
+                </li>
+                <li>
+                    <a href="#slide2"></a>
+                </li>
+                <li>
+                    <a href="#slide3"></a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- PRUEBA -->
+        <!-- <img src="/img/liga.jpg" alt=""> -->
+        <div class="card-contacto" id="contact">
+            <form action="">
+                <h2>Comunicate con nosotros</h2>
+                <div class="container-input">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" placeholder="Ingrese su nombre">
+                </div>
+                <div class="container-input">
+                    <label for="apellido">Mensaje:</label>
+                    <input type="text" name="apellido" placeholder="Ingrese su apellido">
+                </div>
+                <div class="container-input">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Ingrese su email">
+                </div>
+                <textarea name="" id="" cols="93" rows="8"></textarea>
+                <div class="container-btn">
+                    <button type="submit">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="w-100 container-icons">
+            <div class="logo-texto">
+                <img class="logo-footer" src="/img/screen-0.png" alt="">
+                <p>©2021 Sebastian Romay</p>
+            </div>
+            <div class="redes">
+                <a target="_blank" href="https://www.linkedin.com/in/sebastianromay/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a target="_blank" href="https://github.com/romba01">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a target="_blank" href="https://instagram.com/sebastian_agustin">
+                    <i class="fab fa-instagram icon-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+    </footer>
+
 </body>
+
 
 </html>
