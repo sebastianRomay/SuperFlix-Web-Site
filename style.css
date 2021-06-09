@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0%;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 html {
@@ -28,16 +28,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-top: 20px; */
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
+    margin: 0 auto;
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-top: 20px; */
     position: fixed;
     z-index: 3;
 }
@@ -67,9 +66,9 @@ header {
     color: #db232d;
 }
 
-.nav button {
+.nav .btn-login {
     background-color: #db232d;
-    padding: 0 1.25em;
+    padding: 0.7em;
     border-radius: 5px;
     border: none;
     margin: -0.313em 1.25em;
@@ -94,6 +93,16 @@ header {
 .logo:hover {
     cursor: pointer;
     transform: scale(1.5);
+}
+
+.toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
 }
 
 
@@ -133,16 +142,23 @@ header {
     margin: 0.938em;
 }
 
+.mail-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    width: 100%;
+}
+
 .titulo button {
     background-color: #db232d;
     padding: 0.656em;
     border: none;
-    margin: -2.51em 1.563em;
-    margin-left: 14.4em;
     font-size: 1.5em;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     z-index: 1;
+    width: 100%;
 }
 
 .titulo button:hover {
@@ -155,28 +171,17 @@ header {
 }
 
 .titulo input {
-    margin-right: 11%;
-    margin-top: 2.5em;
     padding: 0.671em;
-    font-size: 1.49em;
+    font-size: 1.5em;
     border: none;
+    width: 40%;
 }
-
-
-/* .nosotros {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    flex-wrap: wrap; */
 
 
 /* SECTION NOSOTROS */
 
 .titulo-nosotros {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     color: #fff;
     z-index: 1;
@@ -205,16 +210,13 @@ header {
     height: 100%;
     width: 100%;
     margin-top: 30px;
-    /* padding: 0; */
     position: absolute;
 }
 
 .card {
     width: 20%;
     height: 50%;
-    /* z-index: 1; */
     position: relative;
-    /* top: 95%; */
     transition: all 100ms ease-in;
 }
 
@@ -262,12 +264,6 @@ header {
 
 
 /* CONTACTO */
-
-
-/* .contacto img {
-    width: 60%;
-    position: relative;
-} */
 
 .contacto {
     display: flex;
@@ -317,7 +313,6 @@ header {
 }
 
 textarea {
-    /* margin-left: 9.8em; */
     margin: auto;
 }
 
@@ -330,7 +325,6 @@ textarea {
     font-size: 1.5em;
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    /* z-index: 1; */
 }
 
 .container-btn button:hover {
@@ -338,7 +332,7 @@ textarea {
 }
 
 
-/* PRUEBA */
+/* CARROUSEL */
 
 .container {
     margin: auto;
@@ -474,8 +468,11 @@ ul.slider li:target {
     color: #fff;
 }
 
-@media only screen and (max-width: 768px) {
-    .card {
+
+/* PANTALLA DE LOGIN */
+
+@media only screen and (max-width: 576px) {
+    /*  .card {
         width: 100%;
         margin-bottom: 10px;
         top: 85%;
@@ -497,5 +494,104 @@ ul.slider li:target {
     }
     .container {
         top: 80em;
+    } */
+    /* .logo {
+            width: 15%;
+        }
+        .nav button {
+            width: 70%;
+            position: relative;
+            padding: 0.3em;
+            border-radius: 5px;
+            border: none;
+            top: 5%;
+            right: 30%;
+            /* margin: -0.31em 1.25em;
+            font-size: 0.938em; 
+
+
+}*/
+    header {
+        height: 100vh;
+        width: 100%;
+    }
+    .container-nav {
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 1;
+        margin: auto;
+        height: 10.55vh;
+    }
+    .nav {
+        position: fixed;
+    }
+    .nav-ul {
+        flex-direction: column;
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        left: 100%;
+        top: 60px;
+        background-color: #db232d;
+        align-items: center;
+        margin-right: 20px;
+        width: 100%;
+        height: 40%;
+        padding: 5px 0;
+        transition: left 0.3s;
+    }
+    .nav-ul_visible {
+        left: 0;
+    }
+    .nav-ul li {
+        margin: 12px;
+    }
+    .nav-ul a {}
+    .nav-ul a:hover,
+    .nav-ul a_active {
+        color: #000;
+        background: none;
+        font-weight: bold;
+    }
+    .nav .btn-login {
+        background-color: #db232d;
+        padding: 0.4em;
+        border-radius: 5px;
+        border: 2px solid;
+        margin: auto;
+        font-size: 1em;
+    }
+    .nav .btn-login:hover {
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.3);
+    }
+    .logo {
+        width: 25%;
+        transition: all 250ms ease-in-out;
+        position: fixed;
+        top: 0;
+        left: -1.7%;
+    }
+    .logo:hover {
+        cursor: pointer;
+        transform: scale(1.5);
+    }
+    .toggle {
+        width: 10%;
+        height: 8vh;
+        position: fixed;
+        right: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        background-color: #db232d;
+        border-radius: 5px;
+    }
+    .toggle:hover {
+        background-color: rgba(248, 28, 48, 0.6);
+    }
+    .fa-bars {
+        font-size: 1.1em;
     }
 }
