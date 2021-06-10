@@ -41,6 +41,10 @@ header {
     z-index: 3;
 }
 
+.nav-ul .fas {
+    display: none;
+}
+
 .nav-ul {
     display: flex;
     padding: 0;
@@ -405,6 +409,9 @@ ul.slider li:target {
     background-color: rgba(248, 28, 48, 0.5);
 }
 
+
+/* FOOTER */
+
 .container-icons {
     display: flex;
     justify-content: space-around;
@@ -412,7 +419,7 @@ ul.slider li:target {
     position: absolute;
     width: 100%;
     height: 15%;
-    top: 145em;
+    /* top: 140em; */
     z-index: 1;
     background-color: #db232d;
 }
@@ -472,45 +479,6 @@ ul.slider li:target {
 /* PANTALLA DE LOGIN */
 
 @media only screen and (max-width: 576px) {
-    /*  .card {
-        width: 100%;
-        margin-bottom: 10px;
-        top: 85%;
-    }
-    .card:hover {
-        width: 100%;
-    }
-    .container-flex {
-        flex-direction: column;
-    }
-    .contacto {
-        top: 92em;
-    }
-    .card-contacto h2 {
-        margin-left: 1em;
-    }
-    .container-icons {
-        top: 195em;
-    }
-    .container {
-        top: 80em;
-    } */
-    /* .logo {
-            width: 15%;
-        }
-        .nav button {
-            width: 70%;
-            position: relative;
-            padding: 0.3em;
-            border-radius: 5px;
-            border: none;
-            top: 5%;
-            right: 30%;
-            /* margin: -0.31em 1.25em;
-            font-size: 0.938em; 
-
-
-}*/
     header {
         height: 100vh;
         width: 100%;
@@ -523,6 +491,7 @@ ul.slider li:target {
     }
     .nav {
         position: fixed;
+        /* width: 100%; */
     }
     .nav-ul {
         flex-direction: column;
@@ -535,17 +504,18 @@ ul.slider li:target {
         align-items: center;
         margin-right: 20px;
         width: 100%;
-        height: 40%;
-        padding: 5px 0;
-        transition: left 0.3s;
+        height: 50%;
+        /* padding: 5px 0; */
+        transition: left 0.3s ease-in-out;
     }
     .nav-ul_visible {
-        left: 0;
+        left: 0%;
     }
     .nav-ul li {
-        margin: 12px;
+        margin: 20px;
+        /* padding: 0 25%; */
+        text-align: center;
     }
-    .nav-ul a {}
     .nav-ul a:hover,
     .nav-ul a_active {
         color: #000;
@@ -576,8 +546,8 @@ ul.slider li:target {
         transform: scale(1.5);
     }
     .toggle {
-        width: 10%;
-        height: 8vh;
+        /* width: 10%; */
+        height: 5vh;
         position: fixed;
         right: 2%;
         display: flex;
@@ -587,11 +557,207 @@ ul.slider li:target {
         border: none;
         background-color: #db232d;
         border-radius: 5px;
+        padding: 20px;
     }
     .toggle:hover {
-        background-color: rgba(248, 28, 48, 0.6);
+        background-color: rgba(248, 28, 48, 0.5);
     }
     .fa-bars {
-        font-size: 1.1em;
+        font-size: .8em;
     }
+    /* PORTADA */
+    .titulo h1 {
+        font-size: 2.2em;
+        margin: 0.5em;
+    }
+    .mail-inicio {
+        margin-top: 2.5em;
+    }
+    .titulo button {
+        padding: 0.4em;
+        font-size: 1.2em;
+    }
+    .titulo button:hover {
+        cursor: pointer;
+    }
+    .titulo p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .titulo input {
+        padding: 0.4em;
+        font-size: 1.21em;
+        width: 50%;
+    }
+    /* SECTION NOSOTROS */
+    .titulo-nosotros {
+        position: relative;
+        top: 20px;
+    }
+    .titulo-nosotros h2 {
+        margin-bottom: 15px;
+        font-size: 1.2em;
+        padding: 8px;
+    }
+    /* CARDS */
+    .container-flex {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        top: 30px;
+        position: relative;
+    }
+    .card {
+        width: 90%;
+        margin-bottom: 10px;
+        top: 85%;
+    }
+    .card:hover {
+        width: 100%;
+    }
+    /* TEXTO EN HOVER SOBRE CARD */
+    .text-img {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+    }
+    .text-img h2 {
+        font-size: 1.2em;
+        letter-spacing: 0.15em;
+    }
+    /* CARROUSEL */
+    .container {
+        width: 95%;
+        height: 65vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+
+ul.slider li img {
+    object-fit: contain;
+}
+
+.menu li a {
+    padding: 8px;
+    width: 1px;
+    height: 1px;
+}
+
+
+/* CONTACTO */
+
+.input-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto {
+    display: flex;
+    position: relative;
+    top: 5em;
+    /* margin-bottom: 80px; */
+    background: no-repeat center url(/img/simplebg.jpg);
+}
+
+.card-contacto {
+    width: 100%;
+    padding: 1em;
+}
+
+.card-contacto h2 {
+    display: inline-flex;
+    font-size: 1.1em;
+    padding: 0.5em;
+    margin: 0;
+}
+
+.container-input label {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+}
+
+.container-input {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-input input {
+    width: 100%;
+    margin: 5px;
+}
+
+textarea {
+    width: 60%;
+}
+
+.container-btn {
+    width: 100;
+    height: 10vh;
+}
+
+.container-btn button {
+    position: relative;
+    padding: 0.3em;
+    font-size: 1.1em;
+    margin: 1.2em 0;
+    left: 7.2em;
+}
+
+
+/* FOOTER */
+
+.container-icons {
+    position: relative;
+    height: 15vh;
+    padding: 0;
+    top: 100px;
+}
+
+.logo-footer {
+    width: 30%;
+}
+
+.logo-texto p {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.redes {
+    margin: 0;
+}
+
+.redes i {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+    color: #000;
+    margin: 0.2em;
+}
+
+.nav-ul .fas {
+    display: inline-flex;
+    font-size: 1.3em;
+    color: #fff;
+    margin: 0 7px;
 }
