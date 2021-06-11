@@ -26,7 +26,7 @@ header {
 
 .container-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -35,20 +35,24 @@ header {
 
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 3;
-}
-
-.nav-ul .fas {
-    display: none;
+    z-index: 5;
+    top: 0;
 }
 
 .nav-ul {
     display: flex;
     padding: 0;
     margin: 0;
+}
+
+.nav-ul .fas {
+    display: none;
+    font-size: 1.1em;
+    color: #fff;
+    margin: 0 7px;
 }
 
 .nav-ul li {
@@ -185,14 +189,14 @@ header {
 /* SECTION NOSOTROS */
 
 .titulo-nosotros {
+    position: relative;
     display: flex;
     align-items: center;
     color: #fff;
     z-index: 1;
-    top: 105%;
+    top: 2em;
     text-align: center;
     flex-direction: column;
-    position: absolute;
 }
 
 .titulo-nosotros h2 {
@@ -213,21 +217,21 @@ header {
     align-items: center;
     height: 100%;
     width: 100%;
-    margin-top: 30px;
-    position: absolute;
+    top: 80px;
+    position: relative;
+    margin-bottom: 5em;
 }
 
 .card {
     width: 20%;
-    height: 50%;
+    height: 45vh;
     position: relative;
-    transition: all 100ms ease-in;
+    transition: all 200ms ease-in-out;
 }
 
 .card:hover {
     cursor: pointer;
-    height: 55%;
-    width: 20%;
+    transform: scale(1.15);
 }
 
 .card img {
@@ -253,7 +257,7 @@ header {
     top: 0;
     z-index: 1;
     opacity: 0;
-    transition: all 400ms ease-in;
+    transition: all 300ms ease-in;
 }
 
 .text-img h2 {
@@ -263,70 +267,81 @@ header {
     text-align: center;
     margin-top: 10px;
     text-shadow: 4px 4px 2px rgba(0, 0, 0, 1);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
 }
 
 
 /* CONTACTO */
 
+.input-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .contacto {
     display: flex;
     position: relative;
     z-index: 1;
-    top: 37em;
+    /* margin-bottom: 20px; */
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-image: url(/img/simplebg.jpg);
+    background: no-repeat center url(/img/simplebg.jpg);
     object-position: center;
 }
 
 .card-contacto {
-    width: 50%;
+    width: 100%;
     padding: 2em;
 }
 
 .card-contacto h2 {
-    display: inline-block;
-    margin-left: 6em;
+    display: inline-flex;
+    /* margin-left: 6em; */
     background-color: #db232d;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-family: 'Roboto', sans-serif;
-    padding: 3%;
+    padding: .5em;
     border-radius: 5px;
     color: #fff;
-    margin-bottom: 4.5%;
+    margin: 1.5em 0 1.5em 0;
 }
 
 .container-input label {
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .container-input {
-    margin: 10px 0px;
-    width: 100%;
+    width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
 }
 
 .container-input input {
-    width: 80%;
-    margin: 1%;
+    width: 70%;
+    margin: 1em;
 }
 
 textarea {
-    margin: auto;
+    width: 70%;
+    height: 20vh;
 }
 
 .container-btn button {
     background-color: #db232d;
-    padding: 0.6em;
+    padding: 0.4em;
     border: none;
-    margin-top: 3%;
-    margin-left: 85%;
-    font-size: 1.5em;
+    margin: 1em;
+    /* margin-top: 3%; */
+    /* margin-left: 85%; */
+    font-size: 1.2em;
     color: #fff;
     font-family: 'Roboto', sans-serif;
 }
@@ -339,10 +354,15 @@ textarea {
 /* CARROUSEL */
 
 .container {
-    margin: auto;
-    /* background-color: white; */
-    width: 800px;
-    /* padding: 30px; */
+    width: 65%;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    top: 60px;
+    /* bottom: 40px; */
 }
 
 ul,
@@ -372,7 +392,7 @@ ul.slider li {
 ul.slider li img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: center;
 }
 
 ul.slider li:first-child {
@@ -406,7 +426,7 @@ ul.slider li:target {
 }
 
 .menu li a:hover {
-    background-color: rgba(248, 28, 48, 0.5);
+    background-color: rgba(219, 35, 45, 0.5);
 }
 
 
@@ -473,291 +493,4 @@ ul.slider li:target {
 
 .fa-github:hover {
     color: #fff;
-}
-
-
-/* PANTALLA DE LOGIN */
-
-@media only screen and (max-width: 576px) {
-    header {
-        height: 100vh;
-        width: 100%;
-    }
-    .container-nav {
-        background-color: rgba(0, 0, 0, 1);
-        z-index: 1;
-        margin: auto;
-        height: 10.55vh;
-    }
-    .nav {
-        position: fixed;
-        /* width: 100%; */
-    }
-    .nav-ul {
-        flex-direction: column;
-        position: fixed;
-        padding: 0;
-        margin: 0;
-        left: 100%;
-        top: 60px;
-        background-color: #db232d;
-        align-items: center;
-        margin-right: 20px;
-        width: 100%;
-        height: 50%;
-        /* padding: 5px 0; */
-        transition: left 0.3s ease-in-out;
-    }
-    .nav-ul_visible {
-        left: 0%;
-    }
-    .nav-ul li {
-        margin: 20px;
-        /* padding: 0 25%; */
-        text-align: center;
-    }
-    .nav-ul a:hover,
-    .nav-ul a_active {
-        color: #000;
-        background: none;
-        font-weight: bold;
-    }
-    .nav .btn-login {
-        background-color: #db232d;
-        padding: 0.4em;
-        border-radius: 5px;
-        border: 2px solid;
-        margin: auto;
-        font-size: 1em;
-    }
-    .nav .btn-login:hover {
-        cursor: pointer;
-        background: rgba(0, 0, 0, 0.3);
-    }
-    .logo {
-        width: 25%;
-        transition: all 250ms ease-in-out;
-        position: fixed;
-        top: 0;
-        left: -1.7%;
-    }
-    .logo:hover {
-        cursor: pointer;
-        transform: scale(1.5);
-    }
-    .toggle {
-        /* width: 10%; */
-        height: 5vh;
-        position: fixed;
-        right: 2%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border: none;
-        background-color: #db232d;
-        border-radius: 5px;
-        padding: 20px;
-    }
-    .toggle:hover {
-        background-color: rgba(248, 28, 48, 0.5);
-    }
-    .fa-bars {
-        font-size: .8em;
-    }
-    /* PORTADA */
-    .titulo h1 {
-        font-size: 2.2em;
-        margin: 0.5em;
-    }
-    .mail-inicio {
-        margin-top: 2.5em;
-    }
-    .titulo button {
-        padding: 0.4em;
-        font-size: 1.2em;
-    }
-    .titulo button:hover {
-        cursor: pointer;
-    }
-    .titulo p {
-        font-size: 1.2em;
-        text-align: center;
-    }
-    .titulo input {
-        padding: 0.4em;
-        font-size: 1.21em;
-        width: 50%;
-    }
-    /* SECTION NOSOTROS */
-    .titulo-nosotros {
-        position: relative;
-        top: 20px;
-    }
-    .titulo-nosotros h2 {
-        margin-bottom: 15px;
-        font-size: 1.2em;
-        padding: 8px;
-    }
-    /* CARDS */
-    .container-flex {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-        top: 30px;
-        position: relative;
-    }
-    .card {
-        width: 90%;
-        margin-bottom: 10px;
-        top: 85%;
-    }
-    .card:hover {
-        width: 100%;
-    }
-    /* TEXTO EN HOVER SOBRE CARD */
-    .text-img {
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        top: 0;
-    }
-    .text-img h2 {
-        font-size: 1.2em;
-        letter-spacing: 0.15em;
-    }
-    /* CARROUSEL */
-    .container {
-        width: 95%;
-        height: 65vh;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-}
-
-ul.slider li {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease;
-}
-
-ul.slider li img {
-    object-fit: contain;
-}
-
-.menu li a {
-    padding: 8px;
-    width: 1px;
-    height: 1px;
-}
-
-
-/* CONTACTO */
-
-.input-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.contacto {
-    display: flex;
-    position: relative;
-    top: 5em;
-    /* margin-bottom: 80px; */
-    background: no-repeat center url(/img/simplebg.jpg);
-}
-
-.card-contacto {
-    width: 100%;
-    padding: 1em;
-}
-
-.card-contacto h2 {
-    display: inline-flex;
-    font-size: 1.1em;
-    padding: 0.5em;
-    margin: 0;
-}
-
-.container-input label {
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.8em;
-}
-
-.container-input {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.container-input input {
-    width: 100%;
-    margin: 5px;
-}
-
-textarea {
-    width: 60%;
-}
-
-.container-btn {
-    width: 100;
-    height: 10vh;
-}
-
-.container-btn button {
-    position: relative;
-    padding: 0.3em;
-    font-size: 1.1em;
-    margin: 1.2em 0;
-    left: 7.2em;
-}
-
-
-/* FOOTER */
-
-.container-icons {
-    position: relative;
-    height: 15vh;
-    padding: 0;
-    top: 100px;
-}
-
-.logo-footer {
-    width: 30%;
-}
-
-.logo-texto p {
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-}
-
-.redes {
-    margin: 0;
-}
-
-.redes i {
-    display: flex;
-    justify-content: center;
-    font-size: 1.4em;
-    color: #000;
-    margin: 0.2em;
-}
-
-.nav-ul .fas {
-    display: inline-flex;
-    font-size: 1.3em;
-    color: #fff;
-    margin: 0 7px;
 }
