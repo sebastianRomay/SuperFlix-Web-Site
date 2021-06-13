@@ -5,26 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelisflix</title>
-    <link rel="stylesheet" href="/login.css">
-    <link rel="stylesheet" href="/fontawesome/fontawesome-free-5.15.3-web/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/mediaquerys.css">
+    <link rel="stylesheet" href="/css/mediaqueryslogin.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/fontawesome/fontawesome-free-5.15.3-web/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+    <title>SuperFlix</title>
+    <script src="https://kit.fontawesome.com/0d73ba90ec.js" crossorigin="anonymous"></script>
+    <script defer src="/js/index.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="w-100 nav">
             <div class="w-100 container-nav">
-                <img class="logo" src="/img/screen-0.png" alt="">
+                <img class="logo" src="/img/logoflix.png" alt="">
+                <button class="toggle">
+                    <i class="fas fa-bars"></i>
+                    <!-- <i class="fas fa-times"></i> -->
+                </button>
                 <ul class="nav-ul">
-                    <li> <a href="/index.html">Inicio</a> </li>
-                    <li> <a href="/index.html">Sobre nosotros</a> </li>
-                    <li> <a href="/index.html">Estrenos</a> </li>
-                    <li> <a href="/index.html">Contacto</a> </li>
-                    <form action="/login.html"><button>Iniciar sesion</button>
+                    <li><i class="fas fa-home"></i><a href="index.html">Inicio</a> </li>
+                    <li> <i class="fas fa-info"></i><a href="index.html">Información</a> </li>
+                    <li> <i class="fas fa-ticket-alt"></i></i><a href="index.html">Estrenos</a> </li>
+                    <li><i class="fas fa-envelope-square"></i></i><a href="index.html">Contacto</a> </li>
+                    <form action="/login.html"><button class="btn-login">Iniciar sesion</button>
                     </form>
                 </ul>
             </div>
@@ -38,21 +50,22 @@
             <h1>Iniciar sesion</h1>
             <section class="container-register">
                 <label for="email"></label>
-                <input type="email" name="email" placeholder="Ingresa tu mail">
+                <input type="email" name="email" placeholder="Ingresa tu correo">
                 <label for="password"></label>
                 <input type="password" name="password" placeholder="Contraseña">
-                <form action="/index.html"><button class="entrar">Entrar</button></form>
-                <form action="/register.html"><button>Registrarse</button></form>
+                <div class="container-btn">
+                    <form action="/index.html"><button class="entrar">Entrar</button></form>
+                    <form action="/register.html"><button>Registrarse</button></form>
+                </div>
                 <a href="#">¿Olvidaste tu contraseña?</a>
             </section>
         </div>
     </header>
 
     <footer>
-        <div class="portada-filter-footer"></div>
         <div class="w-100 container-icons">
             <div class="logo-texto">
-                <img class="logo-footer" src="/img/screen-0.png" alt="">
+                <img class="logo-footer" src="/img/logoflix.png" alt="">
                 <p>©2021 Sebastian Romay</p>
             </div>
             <div class="redes">
@@ -68,9 +81,8 @@
             </div>
         </div>
 
-
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 
 </html>
