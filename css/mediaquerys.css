@@ -111,12 +111,12 @@
         width: 70%;
         height: 20vh;
     }
-    .container-btn {
+    .container-btn-index {
         width: 100;
         height: 10vh;
         margin-bottom: 40px;
     }
-    .container-btn button {
+    .container-btn-index button {
         position: relative;
         padding: 0.5em;
         font-size: 1.1em;
@@ -309,12 +309,12 @@
         width: 100%;
         height: 20vh;
     }
-    .container-btn {
+    .container-btn-index {
         width: 100;
         height: 10vh;
         margin-bottom: 40px;
     }
-    .container-btn button {
+    .container-btn-index button {
         position: relative;
         padding: 0.5em;
         font-size: 1.1em;
@@ -635,19 +635,19 @@
         width: 100;
         height: 10vh;
     }
-    .container-btn button {
+    .container-btn-index button {
         position: relative;
-        padding: 0.3em;
+        padding: 0.5em;
         font-size: 1.1em;
         margin: 1.2em 0;
-        left: 7.2em;
+        left: 15%;
     }
     /* FOOTER */
     .container-icons {
         position: relative;
         height: 15vh;
         padding: 0;
-        top: 50px;
+        top: 55px;
     }
     .logo-footer {
         position: relative;
@@ -724,7 +724,7 @@
         justify-content: center;
         position: relative;
         width: 90%;
-        left: -28%;
+        left: 0%;
         height: 6vh;
     }
     @media only screen and (max-width: 425px) {

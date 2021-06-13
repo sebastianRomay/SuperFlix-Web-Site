@@ -18,26 +18,26 @@
     /* BARRA DE NAVEGACION */
     
     header {
-        height: 100vh;
+        height: 90vh;
         width: 100%;
     }
     
     .container-nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        /* margin-top: 20px; */
         background-color: rgba(0, 0, 0, 0.2);
         z-index: 1;
+        margin: 0 auto;
     }
     
     .nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        /* margin-top: 20px; */
         position: fixed;
-        z-index: 3;
+        z-index: 5;
+        top: 0;
     }
     
     .nav-ul {
@@ -46,11 +46,19 @@
         margin: 0;
     }
     
+    .nav-ul .fas {
+        display: none;
+        font-size: 1.1em;
+        color: #fff;
+        margin: 0 7px;
+    }
+    
     .nav-ul li {
         list-style: none;
         margin: 0 0.938em;
         z-index: 1;
         background: transparent;
+        top: 0.3em;
     }
     
     .nav-ul a {
@@ -65,7 +73,7 @@
         color: #db232d;
     }
     
-    .nav button {
+    .nav .btn-login {
         background-color: #db232d;
         padding: 0.7em;
         border-radius: 5px;
@@ -93,6 +101,16 @@
         cursor: pointer;
         transform: scale(1.5);
     }
+    
+    .toggle {
+        color: white;
+        background: none;
+        border: none;
+        font-size: 30px;
+        padding: 0 20px;
+        line-height: 60px;
+        display: none;
+    }
     /* IMAGEN DE PORTADA Y TITULOS */
     
     .portada {
@@ -115,7 +133,7 @@
     
     .container-register {
         width: 50%;
-        height: 80%;
+        height: 70%;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -124,7 +142,7 @@
         background: rgba(0, 0, 0, 0.7);
         border-radius: 5px;
     }
-    /* ESTOY PROBANDO PROPIEDADES */
+    /* LOGIN */
     
     .container-login {
         display: flex;
@@ -133,16 +151,17 @@
         width: 100%;
         height: 100%;
         border-radius: 5px;
+        position: absolute;
     }
     
     .container-login h1 {
         text-align: left;
-        font-size: 2em;
+        font-size: 1.8em;
         color: #fff;
         font-family: 'Roboto', sans-serif;
         position: absolute;
-        top: 18%;
-        left: 30%;
+        top: 19%;
+        left: 31%;
         z-index: 1;
     }
     
@@ -153,8 +172,8 @@
     }
     
     .container-login input {
-        width: 60%;
-        margin-bottom: 1em;
+        width: 75%;
+        margin-bottom: 1.3em;
         border-radius: 2px;
         font-family: 'Roboto', sans-serif;
     }
@@ -163,13 +182,13 @@
     .container-login input[type="email"],
     .container-login input[type="password"] {
         border: none;
-        background: rgb(99, 99, 99);
+        background: rgba(71, 71, 71, 0.9);
         outline: none;
         height: 6vh;
         font-size: 1.2em;
         font-family: 'Roboto', sans-serif;
         position: relative;
-        top: 10%;
+        top: 9%;
     }
     
      ::placeholder {
@@ -180,28 +199,39 @@
     
     .container-login button {
         position: relative;
-        top: 85%;
+        top: 20%;
         border: none;
         outline: none;
-        width: 100%;
+        /* width: 100%; */
         height: 6vh;
-        padding: 0 10em;
+        /* padding: 0 10em; */
         background: #db232d;
         color: #fff;
-        font-size: 1em;
         border-radius: 5px;
         font-family: 'Roboto', sans-serif;
-        margin-bottom: 1.5em;
+        width: 75%;
+        padding: 0 3em;
+        font-size: 0.9em;
+        margin: 25px;
     }
     
     .container-login a {
         position: relative;
-        top: 10%;
-        left: -20%;
+        top: 4%;
+        left: -30%;
         text-decoration: none;
         font-size: 0.8em;
         color: #bbb;
         font-family: 'Roboto', sans-serif;
+    }
+    
+    .container-btn {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 90%;
+        left: 0;
+        height: 6vh;
     }
     
     .container-login a:hover {
@@ -221,18 +251,19 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        position: absolute;
+        position: relative;
         width: 100%;
         height: 15%;
         z-index: 1;
-        background-color: rgba(230, 29, 49, 0.5);
+        background-color: #db232d;
+        /* top: 10%; */
     }
     
     .logo-footer {
         width: 45%;
         border: 1px solid #000;
         background: #000;
-        opacity: 0.9;
+        margin-top: 1em;
     }
     
     .logo-texto p {
@@ -245,6 +276,8 @@
     }
     
     .redes i {
+        /* display: flex; */
+        /* flex-direction: column; */
         font-size: 2em;
         color: #000;
         margin: 0.3em;
